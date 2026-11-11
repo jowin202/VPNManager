@@ -1,0 +1,14 @@
+services:
+  vpn-manager:
+    # Prebuilt image from GitHub Container Registry (see README).
+    # Uncomment "image" and remove "build" to use the prebuilt image
+    # (published by the "Build Docker image" workflow).
+    # image: ghcr.io/jowin202/vpnmanager:latest
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped

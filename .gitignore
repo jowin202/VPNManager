@@ -1,0 +1,29 @@
+# Secrets and local configuration – never commit these
+.env
+*.conf
+example*.ini
+
+# Runtime data
+data/
+data-dev/
+
+# Output of scripts/discover_schema.py contains data about your network
+docs/opnsense_schema/*
+!docs/opnsense_schema/.gitkeep
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+.claude/
